@@ -27,7 +27,6 @@ function Index() {
       <DestinationsGrid limit={6} />
       <WhyUs />
       <FleetGrid limit={6} />
-      <PackagesGrid />
       <Reviews />
       <FinalCTA />
     </Layout>
