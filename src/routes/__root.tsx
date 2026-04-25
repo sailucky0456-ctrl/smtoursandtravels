@@ -35,6 +35,12 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#1a1f2e" },
+      { property: "og:title", content: "SM Tours & Travels — Bangalore Cabs & Outstation" },
+      { name: "twitter:title", content: "SM Tours & Travels — Bangalore Cabs & Outstation" },
+      { property: "og:description", content: "Reliable cabs in Bangalore. Airport transfers, outstation, tour packages. 24/7." },
+      { name: "twitter:description", content: "Reliable cabs in Bangalore. Airport transfers, outstation, tour packages. 24/7." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/54b07a18-bacc-4cef-b7f2-1119a8c41b53/id-preview-554c02be--acbd0f0d-d0db-4505-80e9-dd244d77e799.lovable.app-1777147773878.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/54b07a18-bacc-4cef-b7f2-1119a8c41b53/id-preview-554c02be--acbd0f0d-d0db-4505-80e9-dd244d77e799.lovable.app-1777147773878.png" },
     ],
     links: [
       {
