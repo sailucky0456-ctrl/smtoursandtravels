@@ -4,7 +4,7 @@ import { Hero } from "@/components/site/Hero";
 import { DestinationsGrid } from "@/components/site/DestinationsGrid";
 import { WhyUs } from "@/components/site/WhyUs";
 import { FleetGrid } from "@/components/site/FleetGrid";
-import { PackagesGrid } from "@/components/site/PackagesGrid";
+
 import { Reviews } from "@/components/site/Reviews";
 import { FinalCTA } from "@/components/site/FinalCTA";
 
@@ -27,7 +27,6 @@ function Index() {
       <DestinationsGrid limit={6} />
       <WhyUs />
       <FleetGrid limit={6} />
-      <PackagesGrid />
       <Reviews />
       <FinalCTA />
     </Layout>

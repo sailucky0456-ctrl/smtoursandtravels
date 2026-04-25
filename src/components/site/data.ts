@@ -5,13 +5,21 @@ import tirupati from "@/assets/dest-tirupati.jpg";
 import hampi from "@/assets/dest-hampi.jpg";
 import nandi from "@/assets/dest-nandi.jpg";
 import airport from "@/assets/dest-airport.jpg";
+import wonderla from "@/assets/dest-wonderla.jpg";
+import indiagate from "@/assets/dest-indiagate.jpeg";
 
-import crysta from "@/assets/car-crysta.png";
+import etios from "@/assets/car-etios.png";
 import dzire from "@/assets/car-dzire.png";
+import aura from "@/assets/car-aura.png";
+import zest from "@/assets/car-zest.png";
+import ciaz from "@/assets/car-ciaz.png";
 import ertiga from "@/assets/car-ertiga.png";
-import fortuner from "@/assets/car-fortuner.png";
-import tempo from "@/assets/car-tempo.png";
-import minibus from "@/assets/car-minibus.png";
+import innova from "@/assets/car-innova.png";
+import crysta from "@/assets/car-crysta.png";
+import hycross from "@/assets/car-hycross.jpg";
+import fortuner from "@/assets/car-fortuner.jpg";
+import tempo from "@/assets/car-tempo.jpeg";
+import minibus from "@/assets/car-minibus.jpg";
 
 export type Destination = {
   slug: string;
@@ -30,7 +38,9 @@ export const DESTINATIONS: Destination[] = [
   { slug: "tirupati", name: "Tirupati Temple", tag: "Pilgrimage", km: "250 km", hrs: "5 hrs", img: tirupati, blurb: "Early-morning darshan with a careful, well-rested driver." },
   { slug: "hampi", name: "Hampi Heritage", tag: "Group", km: "340 km", hrs: "6.5 hrs", img: hampi, blurb: "Vijayanagara ruins, boulder fields and unforgettable sunsets." },
   { slug: "nandi", name: "Nandi Hills", tag: "Weekend", km: "60 km", hrs: "1.5 hrs", img: nandi, blurb: "A pre-dawn pickup, a sea of clouds and a hot chai at the top." },
-  { slug: "airport", name: "BLR Airport", tag: "Transfer", km: "40 km", hrs: "1 hr", img: airport, blurb: "Flight-tracked pickups, meet & greet, fixed transparent fare." },
+  { slug: "airport", name: "Bangalore Airport", tag: "Transfer", km: "40 km", hrs: "1 hr", img: airport, blurb: "Flight-tracked pickups, meet & greet, fixed transparent fare." },
+  { slug: "wonderla", name: "Wonderla Bangalore", tag: "Family", km: "30 km", hrs: "45 min", img: wonderla, blurb: "Splash, scream and ride your way through India's top theme park." },
+  { slug: "indiagate", name: "Delhi India Gate Tour", tag: "Tourist", km: "Custom", hrs: "Multi-day", img: indiagate, blurb: "Custom outstation tour to the capital — fully managed by SM Tours." },
 ];
 
 export type Vehicle = {
@@ -44,11 +54,17 @@ export type Vehicle = {
 };
 
 export const VEHICLES: Vehicle[] = [
-  { slug: "dzire", name: "Swift Dzire", type: "Sedan · AC", seats: "4 + 1", perKm: "₹11/km", img: dzire, bg: "from-sky-100 to-sky-50" },
-  { slug: "ertiga", name: "Maruti Ertiga", type: "MPV · AC", seats: "6 + 1", perKm: "₹13/km", img: ertiga, bg: "from-emerald-100 to-emerald-50" },
-  { slug: "crysta", name: "Innova Crysta", type: "Premium · AC", seats: "7 + 1", perKm: "₹14/km", img: crysta, bg: "from-amber-100 to-amber-50" },
+  { slug: "etios", name: "Toyota Etios", type: "Sedan · AC", seats: "4 + 1", perKm: "₹11/km", img: etios, bg: "from-sky-100 to-sky-50" },
+  { slug: "dzire", name: "Swift Dzire", type: "Sedan · AC", seats: "4 + 1", perKm: "₹11/km", img: dzire, bg: "from-blue-100 to-blue-50" },
+  { slug: "aura", name: "Honda Aura", type: "Sedan · AC", seats: "4 + 1", perKm: "₹12/km", img: aura, bg: "from-slate-100 to-slate-50" },
+  { slug: "zest", name: "Tata Zest", type: "Sedan · AC", seats: "4 + 1", perKm: "₹12/km", img: zest, bg: "from-rose-100 to-rose-50" },
+  { slug: "ciaz", name: "Maruti Ciaz", type: "Premium · AC", seats: "4 + 1", perKm: "₹13/km", img: ciaz, bg: "from-amber-100 to-amber-50" },
+  { slug: "ertiga", name: "Maruti Ertiga", type: "SUV · AC", seats: "6 + 1", perKm: "₹13/km", img: ertiga, bg: "from-emerald-100 to-emerald-50" },
+  { slug: "innova", name: "Toyota Innova", type: "SUV · AC", seats: "7 + 1", perKm: "₹14/km", img: innova, bg: "from-orange-100 to-orange-50" },
+  { slug: "crysta", name: "Innova Crysta", type: "Premium · AC", seats: "7 + 1", perKm: "₹16/km", img: crysta, bg: "from-yellow-100 to-yellow-50" },
+  { slug: "hycross", name: "Hycross Hybrid", type: "Premium · AC", seats: "7 + 1", perKm: "₹20/km", img: hycross, bg: "from-teal-100 to-teal-50" },
   { slug: "fortuner", name: "Toyota Fortuner", type: "Luxury SUV", seats: "7 + 1", perKm: "₹26/km", img: fortuner, bg: "from-stone-200 to-stone-50" },
-  { slug: "tempo", name: "Tempo Traveller", type: "Group · AC", seats: "12 + 1", perKm: "₹22/km", img: tempo, bg: "from-rose-100 to-rose-50" },
+  { slug: "tempo", name: "Tempo Traveller", type: "Traveller · AC", seats: "12 + 1", perKm: "₹22/km", img: tempo, bg: "from-fuchsia-100 to-fuchsia-50" },
   { slug: "minibus", name: "Mini Bus", type: "Bus · AC", seats: "20 + 1", perKm: "₹35/km", img: minibus, bg: "from-indigo-100 to-indigo-50" },
 ];
 
