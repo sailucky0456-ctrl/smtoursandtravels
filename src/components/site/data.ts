@@ -16,7 +16,7 @@ import ciaz from "@/assets/car-ciaz.png";
 import ertiga from "@/assets/car-ertiga.png";
 import innova from "@/assets/car-innova.png";
 import crysta from "@/assets/car-crysta.png";
-import hycross from "@/assets/car-hycross.jpg";
+
 import fortuner from "@/assets/car-fortuner.jpg";
 import tempo from "@/assets/car-tempo.jpeg";
 import minibus from "@/assets/car-minibus.jpg";
@@ -62,7 +62,7 @@ export const VEHICLES: Vehicle[] = [
   { slug: "ertiga", name: "Maruti Ertiga", type: "SUV · AC", seats: "6 + 1", perKm: "₹13/km", img: ertiga, bg: "from-emerald-100 to-emerald-50" },
   { slug: "innova", name: "Toyota Innova", type: "SUV · AC", seats: "7 + 1", perKm: "₹14/km", img: innova, bg: "from-orange-100 to-orange-50" },
   { slug: "crysta", name: "Innova Crysta", type: "Premium · AC", seats: "7 + 1", perKm: "₹16/km", img: crysta, bg: "from-yellow-100 to-yellow-50" },
-  { slug: "hycross", name: "Hycross Hybrid", type: "Premium · AC", seats: "7 + 1", perKm: "₹20/km", img: hycross, bg: "from-teal-100 to-teal-50" },
+  
   { slug: "fortuner", name: "Toyota Fortuner", type: "Luxury SUV", seats: "7 + 1", perKm: "₹26/km", img: fortuner, bg: "from-stone-200 to-stone-50" },
   { slug: "tempo", name: "Tempo Traveller", type: "Traveller · AC", seats: "12 + 1", perKm: "₹22/km", img: tempo, bg: "from-fuchsia-100 to-fuchsia-50" },
   { slug: "minibus", name: "Mini Bus", type: "Bus · AC", seats: "20 + 1", perKm: "₹35/km", img: minibus, bg: "from-indigo-100 to-indigo-50" },
