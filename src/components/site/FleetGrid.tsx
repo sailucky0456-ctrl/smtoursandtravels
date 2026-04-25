@@ -38,10 +38,9 @@ export function FleetGrid({ limit }: { limit?: number }) {
                   <h3 className="font-display text-2xl font-medium text-ink">{v.name}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">Seats {v.seats}</p>
                 </div>
-                <div className="text-right">
-                  <span className="block text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">From</span>
-                  <span className="font-display text-xl font-semibold text-saffron-deep">{v.perKm}</span>
-                </div>
+                <span className="rounded-full border border-border bg-background px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                  Best fare
+                </span>
               </div>
               <a
                 href={wa(`Hi SM Tours, I want to book the ${v.name}.`)}

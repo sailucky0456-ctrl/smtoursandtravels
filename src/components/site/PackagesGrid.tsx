@@ -14,7 +14,7 @@ export function PackagesGrid() {
               Popular <em className="font-display italic text-saffron">tour packages.</em>
             </span>
           }
-          intro="All-inclusive pricing — driver, fuel and toll covered. No surprises at drop-off."
+          intro="All-inclusive trips — driver, fuel and toll covered. WhatsApp us for a custom quote tailored to your dates."
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -29,10 +29,6 @@ export function PackagesGrid() {
                 </span>
               )}
               <h3 className="font-display text-2xl font-medium text-cream">{p.name}</h3>
-              <div className="mt-4 flex items-baseline gap-1">
-                <span className="text-sm text-cream/60">starts from</span>
-                <span className="ml-1 font-display text-3xl font-semibold text-saffron">₹{p.price}</span>
-              </div>
               <ul className="mt-5 space-y-2 text-sm text-cream/80">
                 {p.highlights.map((h) => (
                   <li key={h} className="flex items-start gap-2">
@@ -46,12 +42,12 @@ export function PackagesGrid() {
                 <span>Seats: {p.seats}</span>
               </div>
               <a
-                href={wa(`Hi SM Tours, I'd like to book: ${p.name}.`)}
+                href={wa(`Hi SM Tours, I'd like a quote for: ${p.name}.`)}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-cream px-4 py-3 text-sm font-semibold text-ink transition hover:bg-saffron"
               >
-                Book Now
+                Get Quote on WhatsApp
               </a>
             </article>
           ))}
