@@ -24,9 +24,9 @@ function Index() {
   return (
     <Layout>
       <Hero />
-      <DestinationsGrid limit={6} />
+      <DestinationsGrid />
       <WhyUs />
-      <FleetGrid limit={6} />
+      <FleetGrid />
       <Reviews />
       <FinalCTA />
     </Layout>
