@@ -1,25 +1,31 @@
+// Destination images
 import mysore from "@/assets/dest-mysore.jpg";
 import coorg from "@/assets/dest-coorg.jpg";
 import ooty from "@/assets/dest-ooty.jpg";
-import tirupati from "@/assets/dest-tirupati.jpg";
+import chikmagalur from "@/assets/dest-chikmagalur.jpg";
+import pondicherry from "@/assets/dest-pondicherry.jpg";
+import goa from "@/assets/dest-goa.jpg";
+import kodaikanal from "@/assets/dest-kodaikanal.jpg";
+import munnar from "@/assets/dest-munnar.jpg";
+import wayanad from "@/assets/dest-wayanad.jpg";
 import hampi from "@/assets/dest-hampi.jpg";
-import nandi from "@/assets/dest-nandi.jpg";
-import airport from "@/assets/dest-airport.jpg";
-import wonderla from "@/assets/dest-wonderla.jpg";
-import indiagate from "@/assets/dest-indiagate.jpeg";
+import tirupati from "@/assets/dest-tirupati.jpg";
+import yercaud from "@/assets/dest-yercaud.jpg";
+import sakleshpur from "@/assets/dest-sakleshpur.jpg";
+import gokarna from "@/assets/dest-gokarna.jpg";
 
-import etios from "@/assets/car-etios.png";
-import dzire from "@/assets/car-dzire.png";
-import aura from "@/assets/car-aura.png";
-import zest from "@/assets/car-zest.png";
-import ciaz from "@/assets/car-ciaz.png";
-import ertiga from "@/assets/car-ertiga.png";
-import innova from "@/assets/car-innova.png";
-import crysta from "@/assets/car-crysta.png";
-
-import fortuner from "@/assets/car-fortuner.jpg";
-import tempo from "@/assets/car-tempo.jpeg";
-import minibus from "@/assets/car-minibus.jpg";
+// Vehicle images (clean studio photography)
+import dzire from "@/assets/car-dzire-new.jpg";
+import etios from "@/assets/car-etios-new.jpg";
+import amaze from "@/assets/car-amaze.jpg";
+import crysta from "@/assets/car-crysta-new.jpg";
+import ertiga from "@/assets/car-ertiga-new.jpg";
+import carens from "@/assets/car-carens.jpg";
+import hycross from "@/assets/car-hycross.jpg";
+import fortuner from "@/assets/car-fortuner-new.jpg";
+import tempo from "@/assets/car-tempo-new.jpg";
+import minibus from "@/assets/car-minibus-new.jpg";
+import luxurySedan from "@/assets/car-luxury-sedan.jpg";
 
 export type Destination = {
   slug: string;
@@ -32,15 +38,20 @@ export type Destination = {
 };
 
 export const DESTINATIONS: Destination[] = [
-  { slug: "mysore", name: "Mysore Palace", tag: "Family", km: "145 km", hrs: "3 hrs", img: mysore, blurb: "Royal halls, Brindavan gardens & a sweet plate of Mysore pak." },
-  { slug: "coorg", name: "Coorg Hills", tag: "Weekend", km: "265 km", hrs: "5.5 hrs", img: coorg, blurb: "Coffee estates, mist over the valleys, Abbey Falls and silence." },
-  { slug: "ooty", name: "Ooty Hills", tag: "Family", km: "275 km", hrs: "6.5 hrs", img: ooty, blurb: "The Nilgiri toy train, botanical gardens and cool eucalyptus air." },
-  { slug: "tirupati", name: "Tirupati Temple", tag: "Pilgrimage", km: "250 km", hrs: "5 hrs", img: tirupati, blurb: "Early-morning darshan with a careful, well-rested driver." },
-  { slug: "hampi", name: "Hampi Heritage", tag: "Group", km: "340 km", hrs: "6.5 hrs", img: hampi, blurb: "Vijayanagara ruins, boulder fields and unforgettable sunsets." },
-  { slug: "nandi", name: "Nandi Hills", tag: "Weekend", km: "60 km", hrs: "1.5 hrs", img: nandi, blurb: "A pre-dawn pickup, a sea of clouds and a hot chai at the top." },
-  { slug: "airport", name: "Bangalore Airport", tag: "Transfer", km: "40 km", hrs: "1 hr", img: airport, blurb: "Flight-tracked pickups, meet & greet, fixed transparent fare." },
-  { slug: "wonderla", name: "Wonderla Bangalore", tag: "Family", km: "30 km", hrs: "45 min", img: wonderla, blurb: "Splash, scream and ride your way through India's top theme park." },
-  { slug: "indiagate", name: "Delhi India Gate Tour", tag: "Tourist", km: "Custom", hrs: "Multi-day", img: indiagate, blurb: "Custom outstation tour to the capital — fully managed by SM Tours." },
+  { slug: "coorg", name: "Coorg", tag: "Hills", km: "265 km", hrs: "5.5 hrs", img: coorg, blurb: "Coffee plantations, misty green hills and quiet scenic roads." },
+  { slug: "mysore", name: "Mysore", tag: "Heritage", km: "145 km", hrs: "3 hrs", img: mysore, blurb: "Royal palace, heritage architecture and dazzling night lights." },
+  { slug: "ooty", name: "Ooty", tag: "Hills", km: "275 km", hrs: "6.5 hrs", img: ooty, blurb: "Tea estates, the Nilgiri toy train and cool mountain air." },
+  { slug: "chikmagalur", name: "Chikmagalur", tag: "Hills", km: "245 km", hrs: "5 hrs", img: chikmagalur, blurb: "Foggy mountain roads, coffee estates and Western Ghats views." },
+  { slug: "pondicherry", name: "Pondicherry", tag: "Coastal", km: "320 km", hrs: "6 hrs", img: pondicherry, blurb: "French colony streets, mustard yellow facades and a calm beach promenade." },
+  { slug: "goa", name: "Goa", tag: "Beach", km: "560 km", hrs: "10 hrs", img: goa, blurb: "Beach sunsets, swaying palms and that easy coastline vacation vibe." },
+  { slug: "kodaikanal", name: "Kodaikanal", tag: "Hills", km: "460 km", hrs: "8 hrs", img: kodaikanal, blurb: "Star-shaped lake, pine forests and gentle misty hills." },
+  { slug: "munnar", name: "Munnar", tag: "Hills", km: "490 km", hrs: "9 hrs", img: munnar, blurb: "Endless tea gardens carpeting the rolling green hills." },
+  { slug: "wayanad", name: "Wayanad", tag: "Nature", km: "275 km", hrs: "6 hrs", img: wayanad, blurb: "Forest waterfalls, deep greenery and untouched landscapes." },
+  { slug: "hampi", name: "Hampi", tag: "Heritage", km: "340 km", hrs: "6.5 hrs", img: hampi, blurb: "Ancient stone ruins, boulder fields and a UNESCO heritage skyline." },
+  { slug: "tirupati", name: "Tirupati", tag: "Pilgrimage", km: "250 km", hrs: "5 hrs", img: tirupati, blurb: "Temple hills and a spiritual landmark — early-morning darshan ready." },
+  { slug: "yercaud", name: "Yercaud", tag: "Hills", km: "215 km", hrs: "4.5 hrs", img: yercaud, blurb: "Lake, manicured gardens and a relaxed hill-station vibe." },
+  { slug: "sakleshpur", name: "Sakleshpur", tag: "Nature", km: "220 km", hrs: "4 hrs", img: sakleshpur, blurb: "Iconic stone rail bridges and lush Western Ghats greenery." },
+  { slug: "gokarna", name: "Gokarna", tag: "Beach", km: "485 km", hrs: "9 hrs", img: gokarna, blurb: "Calm crescent beaches, cliffs and clear ocean views." },
 ];
 
 export type Vehicle = {
@@ -51,21 +62,22 @@ export type Vehicle = {
   perKm: string;
   img: string;
   bg: string;
+  note?: string;
 };
 
 export const VEHICLES: Vehicle[] = [
-  { slug: "etios", name: "Toyota Etios", type: "Sedan · AC", seats: "4 + 1", perKm: "₹11/km", img: etios, bg: "from-sky-100 to-sky-50" },
-  { slug: "dzire", name: "Swift Dzire", type: "Sedan · AC", seats: "4 + 1", perKm: "₹11/km", img: dzire, bg: "from-blue-100 to-blue-50" },
-  { slug: "aura", name: "Honda Aura", type: "Sedan · AC", seats: "4 + 1", perKm: "₹12/km", img: aura, bg: "from-slate-100 to-slate-50" },
-  { slug: "zest", name: "Tata Zest", type: "Sedan · AC", seats: "4 + 1", perKm: "₹12/km", img: zest, bg: "from-rose-100 to-rose-50" },
-  { slug: "ciaz", name: "Maruti Ciaz", type: "Premium · AC", seats: "4 + 1", perKm: "₹13/km", img: ciaz, bg: "from-amber-100 to-amber-50" },
-  { slug: "ertiga", name: "Maruti Ertiga", type: "SUV · AC", seats: "6 + 1", perKm: "₹13/km", img: ertiga, bg: "from-emerald-100 to-emerald-50" },
-  { slug: "innova", name: "Toyota Innova", type: "SUV · AC", seats: "7 + 1", perKm: "₹14/km", img: innova, bg: "from-orange-100 to-orange-50" },
-  { slug: "crysta", name: "Innova Crysta", type: "Premium · AC", seats: "7 + 1", perKm: "₹16/km", img: crysta, bg: "from-yellow-100 to-yellow-50" },
-  
-  { slug: "fortuner", name: "Toyota Fortuner", type: "Luxury SUV", seats: "7 + 1", perKm: "₹26/km", img: fortuner, bg: "from-stone-200 to-stone-50" },
-  { slug: "tempo", name: "Tempo Traveller", type: "Traveller · AC", seats: "12 + 1", perKm: "₹22/km", img: tempo, bg: "from-fuchsia-100 to-fuchsia-50" },
-  { slug: "minibus", name: "Mini Bus", type: "Bus · AC", seats: "20 + 1", perKm: "₹35/km", img: minibus, bg: "from-indigo-100 to-indigo-50" },
+  { slug: "dzire", name: "Swift Dzire", type: "Sedan", seats: "4 Passengers", perKm: "₹11/km", img: dzire, bg: "from-zinc-100 to-zinc-50", note: "AC Available" },
+  { slug: "etios", name: "Toyota Etios", type: "Sedan", seats: "4 Passengers", perKm: "₹11/km", img: etios, bg: "from-zinc-100 to-zinc-50", note: "Comfort Ride" },
+  { slug: "amaze", name: "Honda Amaze", type: "Sedan", seats: "4 Passengers", perKm: "₹12/km", img: amaze, bg: "from-zinc-100 to-zinc-50", note: "Premium Sedan" },
+  { slug: "crysta", name: "Innova Crysta", type: "SUV / MPV", seats: "7 Passengers", perKm: "₹16/km", img: crysta, bg: "from-zinc-100 to-zinc-50", note: "Most Popular" },
+  { slug: "ertiga", name: "Maruti Ertiga", type: "MPV", seats: "7 Passengers", perKm: "₹13/km", img: ertiga, bg: "from-zinc-100 to-zinc-50", note: "Family Friendly" },
+  { slug: "carens", name: "Kia Carens", type: "MPV", seats: "6/7 Passengers", perKm: "₹15/km", img: carens, bg: "from-zinc-100 to-zinc-50", note: "Spacious Ride" },
+
+  { slug: "hycross", name: "Toyota Hycross", type: "Premium SUV", seats: "7 Passengers", perKm: "₹22/km", img: hycross, bg: "from-zinc-100 to-zinc-50", note: "Hybrid" },
+  { slug: "fortuner", name: "Toyota Fortuner", type: "Luxury SUV", seats: "7 Passengers", perKm: "₹26/km", img: fortuner, bg: "from-zinc-100 to-zinc-50", note: "Premium Luxury" },
+  { slug: "tempo", name: "Tempo Traveller", type: "Traveller", seats: "12 Passengers", perKm: "₹22/km", img: tempo, bg: "from-zinc-100 to-zinc-50", note: "Group Travel" },
+  { slug: "minibus", name: "Mini Bus", type: "Bus", seats: "16+ Passengers", perKm: "₹35/km", img: minibus, bg: "from-zinc-100 to-zinc-50", note: "Large Groups" },
+  { slug: "luxury-sedan", name: "Luxury Sedan", type: "Executive Ride", seats: "4 Passengers", perKm: "₹28/km", img: luxurySedan, bg: "from-zinc-100 to-zinc-50", note: "Business Travel" },
 ];
 
 export type Pkg = {
