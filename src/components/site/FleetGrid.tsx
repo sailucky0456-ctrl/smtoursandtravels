@@ -33,8 +33,6 @@ export function FleetGrid({ limit }: { limit?: number }) {
                   {v.type}
                 </span>
               </div>
-              <div className="px-2">
-              </div>
               <div className="flex items-end justify-between">
                 <div>
                   <h3 className="font-display text-2xl font-medium text-ink">{v.name}</h3>
