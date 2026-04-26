@@ -11,7 +11,7 @@ export function Hero() {
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = `Hi SM Tours, I'd like a quote.\nTrip: ${trip}\nFrom: ${from}\nTo: ${to}\nDate: ${date || "ASAP"}`;
-    window.open(wa(msg), "_blank");
+    window.open(wa(msg), "_blank", "noopener,noreferrer");
   };
 
   return (
