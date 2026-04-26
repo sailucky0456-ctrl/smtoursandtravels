@@ -25,6 +25,7 @@ export function FinalCTA() {
             href={wa("Hi SM Tours, I'd like to book a ride.")}
             target="_blank"
             rel="noreferrer"
+            referrerPolicy="no-referrer"
             className="rounded-full border-2 border-ink px-7 py-3 text-sm font-semibold text-ink transition hover:bg-ink hover:text-cream"
           >
             WhatsApp Now
