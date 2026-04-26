@@ -19,15 +19,15 @@ export function FleetGrid({ limit }: { limit?: number }) {
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((v) => (
-            <article key={v.slug} className="group relative overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
-              <div className={`relative -mx-2 -mt-2 mb-4 aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br ${v.bg}`}>
+            <article key={v.slug} className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card p-4 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
+              <div className={`relative mb-4 aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br ${v.bg}`}>
                 <img
                   src={v.img}
                   alt={v.name}
                   loading="lazy"
                   width={1280}
                   height={896}
-                  className="absolute inset-0 h-full w-full object-contain p-2 transition duration-500 group-hover:scale-105"
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 <span className="absolute left-3 top-3 rounded-full bg-ink/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-cream">
                   {v.type}
