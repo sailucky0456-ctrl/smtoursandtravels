@@ -49,7 +49,7 @@ export function Footer() {
                 <a href={`tel:${PHONE}`} className="hover:text-saffron">{PHONE_DISPLAY}</a>
               </li>
               <li>
-                <a href={wa("Hi SM Tours")} target="_blank" rel="noreferrer" className="hover:text-saffron">WhatsApp Chat</a>
+                <a href={wa("Hi SM Tours")} target="_blank" rel="noreferrer" referrerPolicy="no-referrer" className="hover:text-saffron">WhatsApp Chat</a>
               </li>
               <li>Bangalore, Karnataka</li>
               <li>24 / 7 · 365 days</li>
