@@ -1,9 +1,10 @@
 export const PHONE = "+919110628058";
 export const PHONE_DISPLAY = "+91 91106 28058";
-export const WA_BASE = "https://wa.me/919110628058";
+export const WA_NUMBER = "919110628058";
+export const WA_BASE = `https://api.whatsapp.com/send`;
 
 export const wa = (msg: string) =>
-  `${WA_BASE}?text=${encodeURIComponent(msg)}`;
+  `${WA_BASE}?phone=${WA_NUMBER}&text=${encodeURIComponent(msg)}`;
 
 export const NAV = [
   { to: "/", label: "Home" },
