@@ -64,6 +64,7 @@ export function Header() {
             href={wa("Hi, I'd like to book a ride with SM Tours and Travels.")}
             target="_blank"
             rel="noreferrer"
+            referrerPolicy="no-referrer"
             className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-cream shadow-soft transition hover:bg-saffron-deep"
           >
             Book Now
@@ -99,6 +100,9 @@ export function Header() {
               </a>
               <a
                 href={wa("Hi, I'd like to book a ride with SM Tours and Travels.")}
+                target="_blank"
+                rel="noreferrer"
+                referrerPolicy="no-referrer"
                 className="flex-1 rounded-full bg-ink px-4 py-3 text-center text-sm font-semibold text-cream"
               >
                 WhatsApp

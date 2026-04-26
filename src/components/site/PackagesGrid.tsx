@@ -45,6 +45,7 @@ export function PackagesGrid() {
                 href={wa(`Hi SM Tours, I'd like a quote for: ${p.name}.`)}
                 target="_blank"
                 rel="noreferrer"
+                referrerPolicy="no-referrer"
                 className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-cream px-4 py-3 text-sm font-semibold text-ink transition hover:bg-saffron"
               >
                 Get Quote on WhatsApp

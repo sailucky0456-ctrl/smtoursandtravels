@@ -46,6 +46,7 @@ export function FleetGrid({ limit }: { limit?: number }) {
                 href={wa(`Hi SM Tours, I want to book the ${v.name}.`)}
                 target="_blank"
                 rel="noreferrer"
+                referrerPolicy="no-referrer"
                 className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-4 py-3 text-sm font-semibold text-cream transition hover:bg-saffron-deep"
               >
                 Enquire & Book

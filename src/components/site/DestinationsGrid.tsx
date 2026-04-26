@@ -21,6 +21,7 @@ export function DestinationsGrid({ limit }: { limit?: number }) {
             href={wa("Hi SM Tours, I'd like a custom destination quote.")}
             target="_blank"
             rel="noreferrer"
+            referrerPolicy="no-referrer"
             className="hidden rounded-full border border-ink px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-ink hover:text-cream md:inline-flex"
           >
             Custom trip →
@@ -34,6 +35,7 @@ export function DestinationsGrid({ limit }: { limit?: number }) {
               href={wa(`Hi SM Tours, I want to book a trip to ${d.name}.`)}
               target="_blank"
               rel="noreferrer"
+              referrerPolicy="no-referrer"
               className={`group relative overflow-hidden rounded-3xl bg-card shadow-soft transition hover:shadow-lift ${
                 i === 0 ? "sm:col-span-2 lg:col-span-2 lg:row-span-2" : ""
               }`}
