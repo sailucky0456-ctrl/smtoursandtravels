@@ -25,6 +25,7 @@ export function StickyDock() {
           href={wa("Hi SM Tours, I'd like to enquire about a booking.")}
           target="_blank"
           rel="noreferrer"
+          referrerPolicy="no-referrer"
           aria-label="WhatsApp"
           className="group grid h-14 w-14 place-items-center rounded-full bg-jade text-white shadow-lift transition hover:scale-105"
         >
