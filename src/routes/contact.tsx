@@ -47,7 +47,7 @@ function Card({ icon, title, body, href, cta }: { icon: string; title: string; b
       <h3 className="mt-4 font-display text-2xl font-medium text-ink">{title}</h3>
       <p className="mt-2 text-sm text-muted-foreground">{body}</p>
       {href && cta && (
-        <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="mt-5 inline-flex rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-cream transition hover:bg-saffron-deep">
+        <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" referrerPolicy="no-referrer" className="mt-5 inline-flex rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-cream transition hover:bg-saffron-deep">
           {cta}
         </a>
       )}
