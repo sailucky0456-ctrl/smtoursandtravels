@@ -17,15 +17,16 @@ import gokarna from "@/assets/dest-gokarna.jpg";
 // Vehicle images (clean studio photography)
 import dzire from "@/assets/car-dzire-new.jpg";
 import etios from "@/assets/car-etios-new.jpg";
-import amaze from "@/assets/car-amaze.jpg";
+import ciaz from "@/assets/car-ciaz.jpg";
+import aura from "@/assets/car-aura.jpg";
+import zest from "@/assets/car-zest.jpg";
+import innova from "@/assets/car-innova.jpg";
 import crysta from "@/assets/car-crysta-new.jpg";
 import ertiga from "@/assets/car-ertiga-new.jpg";
-import carens from "@/assets/car-carens.jpg";
-import hycross from "@/assets/car-hycross.jpg";
+import crystaHybrid from "@/assets/car-crysta-hybrid.jpg";
 import fortuner from "@/assets/car-fortuner-new.jpg";
 import tempo from "@/assets/car-tempo-new.jpg";
 import minibus from "@/assets/car-minibus-new.jpg";
-import luxurySedan from "@/assets/car-luxury-sedan.jpg";
 
 export type Destination = {
   slug: string;
@@ -54,30 +55,44 @@ export const DESTINATIONS: Destination[] = [
   { slug: "gokarna", name: "Gokarna", tag: "Beach", km: "485 km", hrs: "9 hrs", img: gokarna, blurb: "Calm crescent beaches, cliffs and clear ocean views." },
 ];
 
+export type VehicleCategory = "Sedan (4+1)" | "6+1 Seater" | "7+1 Seater" | "12+1 Seater" | "21 Seater";
+
 export type Vehicle = {
   slug: string;
   name: string;
   type: string;
+  category: VehicleCategory;
   seats: string;
-  perKm: string;
   img: string;
   bg: string;
   note?: string;
 };
 
+// Order matters: top 6 are the homepage preview ("most popular").
 export const VEHICLES: Vehicle[] = [
-  { slug: "dzire", name: "Swift Dzire", type: "Sedan", seats: "4 Passengers", perKm: "₹11/km", img: dzire, bg: "from-zinc-100 to-zinc-50", note: "AC Available" },
-  { slug: "etios", name: "Toyota Etios", type: "Sedan", seats: "4 Passengers", perKm: "₹11/km", img: etios, bg: "from-zinc-100 to-zinc-50", note: "Comfort Ride" },
-  { slug: "amaze", name: "Honda Amaze", type: "Sedan", seats: "4 Passengers", perKm: "₹12/km", img: amaze, bg: "from-zinc-100 to-zinc-50", note: "Premium Sedan" },
-  { slug: "crysta", name: "Innova Crysta", type: "SUV / MPV", seats: "7 Passengers", perKm: "₹16/km", img: crysta, bg: "from-zinc-100 to-zinc-50", note: "Most Popular" },
-  { slug: "ertiga", name: "Maruti Ertiga", type: "MPV", seats: "7 Passengers", perKm: "₹13/km", img: ertiga, bg: "from-zinc-100 to-zinc-50", note: "Family Friendly" },
-  { slug: "carens", name: "Kia Carens", type: "MPV", seats: "6/7 Passengers", perKm: "₹15/km", img: carens, bg: "from-zinc-100 to-zinc-50", note: "Spacious Ride" },
+  // Top 6 — homepage preview
+  { slug: "dzire", name: "Swift Dzire", type: "Sedan", category: "Sedan (4+1)", seats: "4+1", img: dzire, bg: "from-zinc-100 to-zinc-50", note: "Most Popular" },
+  { slug: "etios", name: "Toyota Etios", type: "Sedan", category: "Sedan (4+1)", seats: "4+1", img: etios, bg: "from-zinc-100 to-zinc-50", note: "Comfort Ride" },
+  { slug: "crysta", name: "Innova Crysta", type: "MPV", category: "6+1 Seater", seats: "6+1", img: crysta, bg: "from-zinc-100 to-zinc-50", note: "Top Rated" },
+  { slug: "ertiga", name: "Maruti Ertiga", type: "MPV", category: "6+1 Seater", seats: "6+1", img: ertiga, bg: "from-zinc-100 to-zinc-50", note: "Family Friendly" },
+  { slug: "fortuner", name: "Toyota Fortuner", type: "Luxury SUV", category: "7+1 Seater", seats: "7+1", img: fortuner, bg: "from-zinc-100 to-zinc-50", note: "Premium Luxury" },
+  { slug: "tempo", name: "Tempo Traveller", type: "Traveller", category: "12+1 Seater", seats: "12+1", img: tempo, bg: "from-zinc-100 to-zinc-50", note: "Group Travel" },
 
-  { slug: "hycross", name: "Toyota Hycross", type: "Premium SUV", seats: "7 Passengers", perKm: "₹22/km", img: hycross, bg: "from-zinc-100 to-zinc-50", note: "Hybrid" },
-  { slug: "fortuner", name: "Toyota Fortuner", type: "Luxury SUV", seats: "7 Passengers", perKm: "₹26/km", img: fortuner, bg: "from-zinc-100 to-zinc-50", note: "Premium Luxury" },
-  { slug: "tempo", name: "Tempo Traveller", type: "Traveller", seats: "12 Passengers", perKm: "₹22/km", img: tempo, bg: "from-zinc-100 to-zinc-50", note: "Group Travel" },
-  { slug: "minibus", name: "Mini Bus", type: "Bus", seats: "16+ Passengers", perKm: "₹35/km", img: minibus, bg: "from-zinc-100 to-zinc-50", note: "Large Groups" },
-  { slug: "luxury-sedan", name: "Luxury Sedan", type: "Executive Ride", seats: "4 Passengers", perKm: "₹28/km", img: luxurySedan, bg: "from-zinc-100 to-zinc-50", note: "Business Travel" },
+  // Remaining fleet
+  { slug: "ciaz", name: "Maruti Ciaz", type: "Sedan", category: "Sedan (4+1)", seats: "4+1", img: ciaz, bg: "from-zinc-100 to-zinc-50" },
+  { slug: "aura", name: "Honda Aura", type: "Sedan", category: "Sedan (4+1)", seats: "4+1", img: aura, bg: "from-zinc-100 to-zinc-50" },
+  { slug: "zest", name: "Tata Zest", type: "Sedan", category: "Sedan (4+1)", seats: "4+1", img: zest, bg: "from-zinc-100 to-zinc-50" },
+  { slug: "innova", name: "Innova", type: "MPV", category: "6+1 Seater", seats: "6+1", img: innova, bg: "from-zinc-100 to-zinc-50" },
+  { slug: "crysta-hybrid", name: "Innova Crysta Hybrid", type: "Premium MPV", category: "7+1 Seater", seats: "7+1", img: crystaHybrid, bg: "from-zinc-100 to-zinc-50", note: "Hybrid" },
+  { slug: "minibus", name: "Mini Bus", type: "Bus", category: "21 Seater", seats: "21", img: minibus, bg: "from-zinc-100 to-zinc-50", note: "Large Groups" },
+];
+
+export const VEHICLE_CATEGORY_ORDER: VehicleCategory[] = [
+  "Sedan (4+1)",
+  "6+1 Seater",
+  "7+1 Seater",
+  "12+1 Seater",
+  "21 Seater",
 ];
 
 export type Pkg = {
