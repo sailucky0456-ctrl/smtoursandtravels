@@ -26,7 +26,7 @@ function Index() {
       <Hero />
       <DestinationsGrid />
       <WhyUs />
-      <FleetGrid />
+      <FleetGrid homeMode />
       <Reviews />
       <FinalCTA />
     </Layout>
