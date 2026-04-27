@@ -1,16 +1,25 @@
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { VEHICLES } from "./data";
 import { wa } from "./constants";
 import { SectionHeader } from "./SectionHeader";
 
+const HOME_LIMIT = 6;
 const INITIAL = 6;
 
-export function FleetGrid({ limit }: { limit?: number }) {
+export function FleetGrid({ homeMode = false }: { homeMode?: boolean }) {
   const [expanded, setExpanded] = useState(false);
 
-  const all = limit ? VEHICLES.slice(0, limit) : VEHICLES;
-  const visible = expanded ? all : all.slice(0, INITIAL);
-  const canExpand = all.length > INITIAL;
+  const all = VEHICLES;
+  let visible;
+  let canExpand = false;
+
+  if (homeMode) {
+    visible = all.slice(0, HOME_LIMIT);
+  } else {
+    visible = expanded ? all : all.slice(0, INITIAL);
+    canExpand = all.length > INITIAL;
+  }
 
   return (
     <section className="relative bg-gradient-cream py-24 lg:py-32">
@@ -48,16 +57,11 @@ export function FleetGrid({ limit }: { limit?: number }) {
               </div>
 
               <div className="flex flex-1 flex-col p-5">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h3 className="font-display text-2xl font-medium leading-tight text-ink">{v.name}</h3>
-                    <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-saffron-deep">
-                      {v.type}
-                    </p>
-                  </div>
-                  <span className="shrink-0 rounded-full bg-secondary px-3 py-1 text-[11px] font-semibold text-ink">
-                    {v.perKm}
-                  </span>
+                <div>
+                  <h3 className="font-display text-2xl font-medium leading-tight text-ink">{v.name}</h3>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-saffron-deep">
+                    {v.type}
+                  </p>
                 </div>
 
                 <p className="mt-3 text-sm text-muted-foreground">{v.seats} · AC</p>
@@ -79,25 +83,39 @@ export function FleetGrid({ limit }: { limit?: number }) {
           ))}
         </div>
 
-        {canExpand && (
+        {homeMode ? (
           <div className="mt-12 flex justify-center">
-            <button
-              type="button"
-              onClick={() => setExpanded((v) => !v)}
+            <Link
+              to="/fleet"
               className="group inline-flex items-center gap-2 rounded-full border border-ink bg-ink px-7 py-3.5 text-sm font-semibold uppercase tracking-widest text-cream transition hover:bg-saffron-deep hover:border-saffron-deep"
             >
-              {expanded ? "Show Less" : "View More Vehicles"}
-              <svg
-                viewBox="0 0 24 24"
-                className={`h-4 w-4 transition ${expanded ? "rotate-180" : ""}`}
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M6 9l6 6 6-6" />
+              View Full Fleet
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
-            </button>
+            </Link>
           </div>
+        ) : (
+          canExpand && (
+            <div className="mt-12 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setExpanded((v) => !v)}
+                className="group inline-flex items-center gap-2 rounded-full border border-ink bg-ink px-7 py-3.5 text-sm font-semibold uppercase tracking-widest text-cream transition hover:bg-saffron-deep hover:border-saffron-deep"
+              >
+                {expanded ? "Show Less" : "View More Vehicles"}
+                <svg
+                  viewBox="0 0 24 24"
+                  className={`h-4 w-4 transition ${expanded ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+            </div>
+          )
         )}
       </div>
     </section>
