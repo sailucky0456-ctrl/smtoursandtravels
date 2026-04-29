@@ -1,18 +1,17 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Layout } from "@/components/site/Layout";
 import { DestinationsGrid } from "@/components/site/DestinationsGrid";
 import { FinalCTA } from "@/components/site/FinalCTA";
+import { setMeta } from "@/lib/meta";
 
-export const Route = createFileRoute("/destinations")({
-  head: () => ({
-    meta: [
-      { title: "Destinations from Bangalore — Mysore, Coorg, Ooty, Tirupati · SM Tours" },
-      { name: "description", content: "Explore our most-booked routes from Bangalore — Mysore, Coorg, Ooty, Tirupati, Hampi, Nandi Hills. Transparent pricing, on-time pickups." },
-      { property: "og:title", content: "Destinations · SM Tours & Travels" },
-      { property: "og:description", content: "Mysore, Coorg, Ooty, Tirupati, Hampi and more — driven by people who know the road." },
-    ],
-  }),
-  component: () => (
+export default function DestinationsPage() {
+  useEffect(() => {
+    setMeta({
+      title: "Destinations from Bangalore — Mysore, Coorg, Ooty, Tirupati · SM Tours",
+      description: "Explore our most-booked routes from Bangalore — Mysore, Coorg, Ooty, Tirupati, Hampi, Nandi Hills.",
+    });
+  }, []);
+  return (
     <Layout>
       <section className="bg-gradient-cream py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
@@ -25,5 +24,5 @@ export const Route = createFileRoute("/destinations")({
       <DestinationsGrid />
       <FinalCTA />
     </Layout>
-  ),
-});
+  );
+}

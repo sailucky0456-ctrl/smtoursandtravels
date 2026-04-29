@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 
 export function Logo({ tone = "ink" }: { tone?: "ink" | "cream" }) {
   const text = tone === "cream" ? "text-cream" : "text-ink";

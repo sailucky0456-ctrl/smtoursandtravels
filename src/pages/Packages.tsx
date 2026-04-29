@@ -1,18 +1,17 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Layout } from "@/components/site/Layout";
 import { PackagesGrid } from "@/components/site/PackagesGrid";
 import { FinalCTA } from "@/components/site/FinalCTA";
+import { setMeta } from "@/lib/meta";
 
-export const Route = createFileRoute("/packages")({
-  head: () => ({
-    meta: [
-      { title: "Tour Packages from Bangalore — All-Inclusive · SM Tours" },
-      { name: "description", content: "Ready-to-book tour packages from Bangalore. Driver, fuel and toll included. Mysore, Coorg, Ooty, Tirupati, Hampi, airport." },
-      { property: "og:title", content: "Tour Packages · SM Tours & Travels" },
-      { property: "og:description", content: "All-inclusive packages — no surprises at drop-off." },
-    ],
-  }),
-  component: () => (
+export default function PackagesPage() {
+  useEffect(() => {
+    setMeta({
+      title: "Tour Packages from Bangalore — All-Inclusive · SM Tours",
+      description: "Ready-to-book tour packages from Bangalore. Driver, fuel and toll included.",
+    });
+  }, []);
+  return (
     <Layout>
       <section className="bg-gradient-cream py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
@@ -25,5 +24,5 @@ export const Route = createFileRoute("/packages")({
       <PackagesGrid />
       <FinalCTA />
     </Layout>
-  ),
-});
+  );
+}

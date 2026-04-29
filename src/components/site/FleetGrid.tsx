@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { VEHICLES, VEHICLE_CATEGORY_ORDER, type Vehicle } from "./data";
 import { wa } from "./constants";
 import { SectionHeader } from "./SectionHeader";

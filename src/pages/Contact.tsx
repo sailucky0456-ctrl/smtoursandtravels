@@ -1,20 +1,15 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Layout } from "@/components/site/Layout";
 import { PHONE, PHONE_DISPLAY, wa } from "@/components/site/constants";
+import { setMeta } from "@/lib/meta";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact SM Tours & Travels — Bangalore Cabs 24/7" },
-      { name: "description", content: "Call or WhatsApp SM Tours & Travels in Bangalore. Bookings confirmed in under 5 minutes, 24 hours a day." },
-      { property: "og:title", content: "Contact · SM Tours & Travels" },
-      { property: "og:description", content: "Call or WhatsApp 24/7 to book your ride." },
-    ],
-  }),
-  component: ContactPage,
-});
-
-function ContactPage() {
+export default function ContactPage() {
+  useEffect(() => {
+    setMeta({
+      title: "Contact SM Tours & Travels — Bangalore Cabs 24/7",
+      description: "Call or WhatsApp SM Tours & Travels in Bangalore. Bookings confirmed in under 5 minutes, 24 hours a day.",
+    });
+  }, []);
   return (
     <Layout>
       <section className="bg-gradient-cream py-20 lg:py-28">
